@@ -16,19 +16,19 @@ RSpec.describe LinkedList do
     list = LinkedList.new
 
     list.append('doop')
-    expect(list.append('doop')).to eq('doop')
+
+    expect(list.head.data).to eq('doop')
     expect(list.head.next_node).to eq(nil)
-    # binding.pry
   end
 
-  xit 'counts' do
+  it 'counts' do
     list = LinkedList.new
 
-    # expect(list.count).eq(0)
+    expect(list.count).to eq(0)
 
     list.append('doop')
 
-    expect(list.countd).to eq(1)
+    expect(list.count).to eq(1)
 
     list.append('deep')
 
@@ -36,7 +36,7 @@ RSpec.describe LinkedList do
 
   end
 
-  xit 'returns nodes to a string' do
+  it 'returns nodes to a string' do
     list = LinkedList.new
 
     list.append('doop')

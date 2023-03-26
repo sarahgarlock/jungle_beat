@@ -1,5 +1,7 @@
+require './lib/node'
+
 class LinkedList
-  attr_reader :head, :next_node
+  attr_accessor :head, :next_node
 
   def initialize
     @head = nil
@@ -7,8 +9,6 @@ class LinkedList
   end
 
   def append(data)
-    current = Node.new(data)
-    last_node = nil
     if @head.nil?
       @head = Node.new(data)
     else
@@ -17,6 +17,7 @@ class LinkedList
         current = current.next_node
       end
       current.next_node = Node.new(data)
+     
     end
 
   end
@@ -34,8 +35,10 @@ class LinkedList
 
   def to_string
     current = @head
+    str = ""
     while current != nil
       # loop data to print in " " / "#{data}"
+      str += current.data.to_s
       current = current.next_node
     end
 
