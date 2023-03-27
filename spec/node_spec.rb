@@ -1,6 +1,6 @@
 require 'rspec'
 require './lib/node'
-require 'pry'
+# require 'pry'
 
 RSpec.describe Node do
   it 'exists' do  
