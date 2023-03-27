@@ -51,19 +51,3 @@ class LinkedList
     end
   end
 end
-
-#  From another student
-  #  def append(data)
-  #     node = @head
-  #     last_node = nil
-  #     if node.nil?
-  #       @head = Node.new(data)
-  #     else
-  #       until node.nil?
-  #         last_node = node
-  #         node = node.next_node
-  #       end
-  #       last_node.next_node = Node.new(data)
-  #     end
-  #     data
-  #   end
