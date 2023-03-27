@@ -34,20 +34,25 @@ class LinkedList
   end
 
   def to_string
-    current = @head
-    str = ""
-    while current != nil
+    if
+      current = @head
+      string = ""
+      while current != nil
+        string += current.data.to_s
+        string += " " if current.next_node !=nil
       # loop data to print in " " / "#{data}"
-      str += current.data.to_s
-      current = current.next_node
+       # str.concat("#{current.data}")
+      # str += current.data.to_s
+        current = current.next_node
+      end
+      string
+    else
+     ''
     end
-
   end
-
-
 end
 
-  #  From another student
+#  From another student
   #  def append(data)
   #     node = @head
   #     last_node = nil
