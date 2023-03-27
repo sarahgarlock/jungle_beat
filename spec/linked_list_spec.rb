@@ -15,9 +15,9 @@ RSpec.describe LinkedList do
   it 'appends nodes to the end' do
     list = LinkedList.new
 
-    list.append('doop')
+    # list.append('doop')
 
-    expect(list.head.data).to eq('doop')
+    expect(list.append('doop')).to eq('doop')
     expect(list.head.next_node).to eq(nil)
   end
 
@@ -43,7 +43,13 @@ RSpec.describe LinkedList do
     list.append('deep')
 
     expect(list.to_string).to eq('doop deep')
-   binding.pry 
+  #  binding.pry 
   end
 
+ 
+
+
+  it 'inserts nodes' do
+    list = LinkedList.new
+  end
 end

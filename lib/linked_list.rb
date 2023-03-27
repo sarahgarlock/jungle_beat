@@ -19,7 +19,7 @@ class LinkedList
       current.next_node = Node.new(data)
      
     end
-
+    data
   end
 
   def count
@@ -36,18 +36,16 @@ class LinkedList
   def to_string
     if
       current = @head
-      string = ""
-      while current != nil
+      string = ''
+      until current == nil
         string += current.data.to_s
-        string += " " if current.next_node !=nil
+        string += ' ' if current.next_node != nil
       # loop data to print in " " / "#{data}"
        # str.concat("#{current.data}")
       # str += current.data.to_s
         current = current.next_node
       end
       string
-    else
-     ''
     end
   end
 end
