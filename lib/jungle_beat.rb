@@ -38,5 +38,4 @@ class JungleBeat
     end
     count
   end
-  test
 end
