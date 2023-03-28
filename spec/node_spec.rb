@@ -11,13 +11,13 @@ RSpec.describe Node do
 
   it 'has data' do
     node = Node.new('plop')
+    node.data
 
     expect(node.data).to eq('plop')
   end
 
   it 'has no next node' do
     node = Node.new('plop')
-    node.next_node
 
     expect(node.next_node).to eq(nil)
   end
