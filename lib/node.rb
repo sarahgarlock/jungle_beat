@@ -7,4 +7,8 @@ class Node
   
   end
 
+  def value
+    @value
+  end
+
 end
