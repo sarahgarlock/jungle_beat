@@ -69,7 +69,7 @@ class LinkedList
     while current_index < index && !current.nil? # inserts if there is a head
       previous = current
       current = current.next_node # sets next_node to the current node
-      current_index += 1 # transverses
+      current_index += 1 # transverses 1
     end
     previous.next_node = new_node
     new_node.next_node = current
