@@ -26,7 +26,8 @@ class JungleBeat
     added_sounds = added_sounds(sounds)
     added_sounds.each do |added_sound|
       list.append(sound)
-
+    end
+  end
  
   # same count method from LinkedList class
   def count
