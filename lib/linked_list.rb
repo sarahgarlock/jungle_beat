@@ -93,6 +93,20 @@ class LinkedList
     end
     data.rstrip
   end
+
+  def value
+    @value
+  end
+
+  def includes?(sound)
+    string = to_string.split
+    if string.include?(sound)
+      true
+    else
+      false
+    end
+  end
+
 end
 
   
