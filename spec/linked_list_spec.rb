@@ -46,10 +46,30 @@ RSpec.describe LinkedList do
   #  binding.pry 
   end
 
- 
+  it 'prepends' do
+    list = LinkedList.new
+
+    list.append('plop')
+    list.append('suu')
+    list.prepend('dop')
+    list.to_string
+
+    expect(list.head.data).to eq('dop')
+    expect(list.count).to eq (3)
+    expect(list.to_string).to eq('dop plop suu')
+  end
 
 
   it 'inserts nodes' do
     list = LinkedList.new
+
+    list.append('plop')
+    list.append('suu')
+    list.prepend('dop')
+    list.insert(1, 'woo')
+
+
+    # binding.pry
+    expect(list.to_string).to eq ('dop woo plop suu')
   end
 end
