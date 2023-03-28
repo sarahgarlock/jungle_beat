@@ -94,16 +94,30 @@ class LinkedList
     data.rstrip
   end
 
-  def value
-    @value
-  end
-
   def includes?(sound)
     string = to_string.split
     if string.include?(sound)
       true
     else
       false
+    end
+  end
+
+  def pop
+    if @head.nil?
+      return nil
+    elsif @head.next_node.nil?
+      value = @head.value
+      @head = nil
+      return value
+    else
+      current_node = @head
+      while current_node.next_node.next_node != nil
+        current_node = current_node.next_node
+      end
+      value = current_node.next_node.value
+      current_node.next_node = nil
+      return value
     end
   end
 

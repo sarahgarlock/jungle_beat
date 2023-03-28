@@ -97,6 +97,8 @@ RSpec.describe LinkedList do
     list.append('shu')
     list.append('blop')
 
+    list.includes?('deep')
+
     expect(list.includes?('deep')).to be true
   end
   
@@ -108,7 +110,24 @@ RSpec.describe LinkedList do
     list.append('shi')
     list.append('shu')
     list.append('blop')
-    
+
+    list.includes?('dep')
+
     expect(list.includes?('dep')).to be false
+  end
+
+  it 'removes the last element' do
+    list = LinkedList.new
+
+    list.append('deep')
+    list.append('woo')
+    list.append('shi')
+    list.append('shu')
+    list.append('blop')
+
+    list.pop
+    list.pop
+
+    expect(list.to_string).to eq('deep woo shi')
   end
 end
