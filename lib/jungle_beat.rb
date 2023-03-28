@@ -37,6 +37,6 @@ class JungleBeat
       current = current.next_node
     end
     count
-
   end
+  test
 end
