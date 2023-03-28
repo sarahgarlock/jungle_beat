@@ -74,6 +74,25 @@ class LinkedList
     previous.next_node = new_node
     new_node.next_node = current
   end
+
+
+  def find(index, elements)
+    data = ""
+    counter = 0
+    current_node = @head
+    return false if !current_node.next_node
+    until counter == index
+      current_node = current_node.next_node
+      counter += 1
+    end
+    counter = 0
+    while counter < elements
+      data += "#{current_node.data} "
+      counter += 1
+      current_node = current_node.next_node
+    end
+    data.rstrip
+  end
 end
 
   
